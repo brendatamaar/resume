@@ -23,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
+      <title>Brendatama Akbar</title>
       <body>{children}</body>
       <Analytics />
     </html>
