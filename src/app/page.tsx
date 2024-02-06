@@ -152,8 +152,11 @@ export default function Page() {
                       {education.start} - {education.end}
                     </div>
                   </div>
+                  <div className="mt-2">{education.degree} </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-xs">
+                  {education.desc}
+                </CardContent>
               </Card>
             );
           })}

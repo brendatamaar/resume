@@ -33,6 +33,7 @@ export const RESUME_DATA = {
       degree: "Associate Degree in Information Engineering, GPA: 3.7",
       start: "2017",
       end: "2019",
+      desc: "Prominent coursework: Web and Mobile App Development, Databases, Objectoriented Programming, DevOps. Developed 24 application for monthly project using various programming languages, frameworks and APIs. Participated in DILo Hackathon Festival in 2019 as Designer."
     },
   ],
   work: [
@@ -42,8 +43,8 @@ export const RESUME_DATA = {
       badges: [],
       title: "Web Software Engineer",
       logo: "",
-      start: "2021",
-      end: "2024",
+      start: "2022",
+      end: "Present",
       description:
         "PLN Icon Plus (ICON+) is a Subsidiary Entity of PT PLN (Persero). ICON+ is focused on serving the needs of PT PLN (Persero) for telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback, Technologies: Vue.js, Node, Spring Boot",
     },
@@ -53,8 +54,8 @@ export const RESUME_DATA = {
       badges: [],
       title: "Front-End Developer",
       logo: "",
-      start: "2015",
-      end: "2021",
+      start: "2020",
+      end: "2022",
       description:
         "Cipta Kreasi is a company that provides digital marketing services (search engine Optimization, search engine marketing, and social media marketing) and software development. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. I also implemented several SEO strategies in website optimization, content and link building. Technologies: Laravel, Lumen, Bootstrap, Wordpress",
     },
@@ -64,21 +65,31 @@ export const RESUME_DATA = {
       badges: [],
       title: "Junior Front-End Developer",
       logo: "",
-      start: "2012",
-      end: "2015",
+      start: "2019",
+      end: "2020",
       description:
         "Tebuireng Telecom is a company that provides system integrator and software development solutions. I assisted in developing web components, integrating API and resolving front-end related issues.",
     },
   ],
   skills: [
-    "JavaScript",
     "TypeScript",
-    "React/Vue",
-    "Laravel/Codeigniter",
-    "Bootstrap/Bulma/Tailwind",
-    "Prisma/Sequelize",
-    "Node.js/Next.js",
+    "React",
+    "Vue",
+    "Angular",
+    "Saas",
+    "Bulma",
+    "Tailwind",
+    "Prisma",
+    "Sequelize",
+    "Node Js",
+    "Next Js",
     "Spring Boot",
+    "Laravel",
+    "Lumen",
+    "Codeigniter",
+    "Postgre",
+    "Mongo",
+    "Grafana"
   ],
   projects: [
     {
@@ -90,7 +101,7 @@ export const RESUME_DATA = {
         "Bootstrap",
         "Spring Boot"
       ],
-      description: "PLN's product for calculating, paying and reporting tax.",
+      description: "A digital platform designed to simplify the intricate processes of tax calculation, reporting, and payment.",
       logo: "",
       link: {
         label: "air-tax",
@@ -103,11 +114,11 @@ export const RESUME_DATA = {
         "Main Project",
         "Vue",
         "Node.js",
-        "Bootstrap",
+        "Materialize CSS",
         "Spring Boot",
         "Kotlin"
       ],
-      description: "PLN's product for conducting customer satisfaction level surveys.",
+      description: "A website developed to seamlessly conducting and analyzing customer satisfaction surveys.",
       logo: "",
       link: {
         label: "cheskp",
@@ -145,7 +156,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Sewa-gi",
-      techStack: ["Laravel", "Bootstrap", "Elasticsearch", "Google APIs", "ArcGis", "Xendit"],
+      techStack: ["Laravel", "Saas", "Elasticsearch", "Google APIs", "ArcGis", "Xendit"],
       description:
         "User-friendly apartment management dashboard.",
       logo: "",
