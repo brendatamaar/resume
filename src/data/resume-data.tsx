@@ -197,7 +197,7 @@ export const RESUME_DATA = {
         href: "https://sewagi-web.inspira.web.id",
       },
       img: "/images/sewagi.webp",
-      isFeatured: true
+      isFeatured: false
     },
   ],
 } as const;

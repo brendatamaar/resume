@@ -25,9 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:p-16">
-          {children}
-        </main></body>
+        {children}</body>
       <Analytics />
     </html>
   );
