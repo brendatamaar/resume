@@ -15,7 +15,7 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="block md:flex print:flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold -mb-1">{RESUME_DATA.name}</h1>
+            <h1 className="text-xl md:text-2xl font-bold -mb-1">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-muted-foreground">
               {RESUME_DATA.about}
             </p>
@@ -171,7 +171,7 @@ export default function Page() {
           </p>
           <a href="mailto:brendatamaa@gmail.com">
             <Button>
-              <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Let's connect
+              <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Let&apos;s connect
             </Button>
           </a>
         </Section>
