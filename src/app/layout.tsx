@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import { RESUME_DATA } from "@/data/resume-data";
 
 import "./globals.css";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Brendatama Akbar Resume",
-  description: "my resume showcasing my experience and skills",
+  title: `${RESUME_DATA.name} - ${RESUME_DATA.currentJob}`,
+  description: "RESUME_DATA.summary",
 };
 
 // If loading a variable font, you don't need to specify the font weight
@@ -23,7 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
+      <body>
+        <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:p-16">
+          {children}
+        </main></body>
       <Analytics />
     </html>
   );

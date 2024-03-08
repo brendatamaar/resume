@@ -5,10 +5,11 @@ export const RESUME_DATA = {
   initials: "BA",
   location: "Jakarta, WIB",
   locationLink: "https://www.google.com/maps/place/Jakarta",
+  currentJob: "Frontend Developer",
   about:
-    "Web engineer who likes to solve real-live problems with technology.",
+    "Front-End developer who loves to solve problems.",
   summary:
-    "Passionate engineer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work mostly with Vue, Next and Typescript.",
+    "Passionate developer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work mostly with Vue, Next and Typescript.",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
@@ -29,11 +30,11 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "CEP CCIT Faculty of Engineering, University of Indonesia",
+      school: "CEP CCIT University of Indonesia",
       degree: "Associate Degree in Information Engineering, GPA: 3.7",
       start: "2017",
       end: "2019",
-      desc: "Prominent coursework: Web and Mobile App Development, Databases, Objectoriented Programming, DevOps. Developed 24 application for monthly project using various programming languages, frameworks and APIs. Participated in DILo Hackathon Festival in 2019 as Designer."
+      desc: "Prominent coursework: Web & Mobile App Development, Databases, Objectoriented Programming, DevOps. Developed 24 application for monthly project using various programming languages, frameworks and APIs. Participated in DILo Hackathon Festival in 2019 as Designer."
     },
   ],
   work: [
@@ -93,18 +94,18 @@ export const RESUME_DATA = {
         "Side Project",
         "Next JS",
         "React",
-        "Tailwind",
         "Radix UI",
         "Typescript",
         "Spotify API"
       ],
-      description: "A customized tracks recommendation based on favorite artists.",
+      description: "Customized track recommendations based on your favorite artists.",
       logo: "",
       link: {
-        label: "kenali-caleg",
+        label: "skenatify",
         href: "https://skenatify.vercel.app/",
       },
-      img: ""
+      img: "/images/skenatify.webp",
+      isFeatured: true
     },
     {
       title: "Kenali Caleg",
@@ -113,8 +114,7 @@ export const RESUME_DATA = {
         "React",
         "Next JS",
         "Node JS",
-        "Tailwind",
-        "Webpack"
+        "Tailwind"
       ],
       description: "Webpage to provide info on legislative candidates for the 2024 Indonesian Election.",
       logo: "",
@@ -122,7 +122,8 @@ export const RESUME_DATA = {
         label: "kenali-caleg",
         href: "https://kenali-caleg.vercel.app/",
       },
-      img: ""
+      img: "/images/kenali-caleg.webp",
+      isFeatured: true
     },
     {
       title: "AIR Tax",
@@ -133,13 +134,14 @@ export const RESUME_DATA = {
         "Bootstrap",
         "Spring Boot"
       ],
-      description: "A digital platform designed to simplify the intricate processes of tax calculation, reporting, and payment.",
+      description: "Digital platform designed to simplify the complicated processes of tax calculation, reporting, and payment.",
       logo: "",
       link: {
         label: "air-tax",
         href: "https://web-blue.air.id/airtax-new",
       },
-      img: ""
+      img: "/images/airtax.webp",
+      isFeatured: true
     },
     {
       title: "cheSKP",
@@ -155,7 +157,8 @@ export const RESUME_DATA = {
         label: "cheskp",
         href: "https://cheskp-mobile.pln.co.id/",
       },
-      img: ""
+      img: "/images/cheskp.webp",
+      isFeatured: true
     },
     {
       title: "datatech",
@@ -167,7 +170,8 @@ export const RESUME_DATA = {
         label: "datatech.id",
         href: "https://datatech.id/",
       },
-      img: ""
+      img: "/images/datatech.webp",
+      isFeatured: true
     },
     {
       title: "Englishseed",
@@ -179,7 +183,8 @@ export const RESUME_DATA = {
         label: "englishseed",
         href: "https://www.instagram.com/englishseed/",
       },
-      img: ""
+      img: "",
+      isFeatured: false
     },
     {
       title: "Sewa-gi",
@@ -191,7 +196,8 @@ export const RESUME_DATA = {
         label: "sewagi-web",
         href: "https://sewagi-web.inspira.web.id",
       },
-      img: ""
+      img: "/images/sewagi.webp",
+      isFeatured: true
     },
   ],
 } as const;
