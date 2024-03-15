@@ -6,8 +6,9 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
-import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
+import { EnvelopeOpenIcon, DownloadIcon } from "@radix-ui/react-icons";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -68,6 +69,7 @@ export default function Page() {
                   </a>
                 </Button>
               ))}
+
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
@@ -80,6 +82,13 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
+            </div>
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+              <Link href="/pdf/cv_2024_eng.pdf" locale={false}>
+                <Button>
+                  <DownloadIcon className="mr-2 h-4 w-4" /> Download Resume
+                </Button>
+              </Link>
             </div>
           </div>
 
