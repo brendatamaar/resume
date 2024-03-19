@@ -9,8 +9,9 @@ type BlogPostEntry = Entry<TypePersonalBlogSkeleton, undefined, string>
 export interface BlogPost {
 	title: string
 	slug: string
-	date?: ISO8601DateTimeString
+	date: ISO8601DateTimeString
 	body: RichTextDocument | null
+	tags: string[];
 }
 
 export function parseContentfulBlogPost(blogPostEntry?: BlogPostEntry): BlogPost | null {
@@ -18,11 +19,15 @@ export function parseContentfulBlogPost(blogPostEntry?: BlogPostEntry): BlogPost
 		return null
 	}
 
+	// Extracting tags from metadata
+	const tags = blogPostEntry.metadata?.tags.map(tag => tag.sys.id) || [];
+
 	return {
 		title: blogPostEntry.fields.title || '',
 		slug: blogPostEntry.fields.slug || '',
 		date: blogPostEntry.fields.date,
 		body: blogPostEntry.fields.body || null,
+		tags: tags
 	}
 }
 
@@ -35,9 +40,9 @@ export async function fetchBlogPosts({ preview }: FetchBlogPostsOptions): Promis
 	const blogPostsResult = await contentful.getEntries<TypePersonalBlogSkeleton>({
 		content_type: 'personalBlog',
 		include: 2,
-		order: ['fields.title'],
+		order: ['fields.date'],
 	})
-
+	
 	return blogPostsResult.items.map((blogPostEntry) => parseContentfulBlogPost(blogPostEntry) as BlogPost)
 }
 

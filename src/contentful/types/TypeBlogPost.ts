@@ -3,7 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypePersonalBlogFields {
 	title?: EntryFieldTypes.Symbol;
 	slug?: EntryFieldTypes.Symbol;
-	date?: EntryFieldTypes.Date;
+	date: EntryFieldTypes.Date;
 	body?: EntryFieldTypes.RichText;
 }
 

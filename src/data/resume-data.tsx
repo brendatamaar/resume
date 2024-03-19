@@ -7,9 +7,9 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Jakarta",
   currentJob: "Frontend Developer",
   about:
-    "Front-End developer who loves to solve problems.",
+    "Front End developer who loves to solve problems🖖",
   summary:
-    "Passionate developer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work mostly with Vue, Next and Typescript.",
+    "Passionate developer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work mostly with Vue, Node.js and Typescript.",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
@@ -34,7 +34,7 @@ export const RESUME_DATA = {
       degree: "Associate Degree in Information Engineering, GPA: 3.7",
       start: "2017",
       end: "2019",
-      desc: "Prominent coursework: Web & Mobile App Development, Databases, Objectoriented Programming, DevOps. Developed 24 application for monthly project using various programming languages, frameworks and APIs. Participated in DILo Hackathon Festival in 2019 as Designer."
+      desc: "Prominent coursework: Web & Mobile App Development, Databases, Objectoriented Programming, DevOps. Developed 24 application for monthly project using various programming languages, frameworks and APIs."
     },
   ],
   work: [
@@ -47,7 +47,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Present",
       description:
-        "PLN Icon Plus (ICON+) is a Subsidiary Entity of PT PLN (Persero). ICON+ is focused on serving the needs of PT PLN (Persero) for telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback, Technologies: Vue.js, Node, Spring Boot",
+        "PLN Icon Plus (ICON+) is a Subsidiary Entity of State Electricity Company (PLN) Indonesia. ICON+ is focused on serving the needs of PLN Indonesia for telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback, Technologies: Vue.js, Node, Spring Boot",
     },
     {
       company: "Cipta Kreasi",
@@ -76,16 +76,18 @@ export const RESUME_DATA = {
     "TypeScript",
     "React",
     "Vue",
-    "Tailwind",
-    "Bootstrap",
-    "Prisma",
-    "Node Js",
     "Next Js",
+    "Tailwind",
+    "Node Js",
+    "Express",
     "Spring Boot",
     "Laravel",
     "PostgreSQL",
-    "Mongo DB",
-    "Grafana"
+    "MongoDB",
+    "Grafana",
+    "Jest",
+    "Storybook",
+    "Playwright"
   ],
   projects: [
     {
@@ -131,10 +133,10 @@ export const RESUME_DATA = {
         "Main Project",
         "Vue",
         "Node.js",
-        "Bootstrap",
+        "Vuetify",
         "Spring Boot"
       ],
-      description: "Digital platform designed to simplify the complicated processes of tax calculation, reporting, and payment.",
+      description: "SaaS designed to simplify tax calculation, tax reporting, and tax payment process.",
       logo: "",
       link: {
         label: "air-tax",
@@ -149,6 +151,7 @@ export const RESUME_DATA = {
         "Main Project",
         "Vue",
         "Node.js",
+        "Bootstrap",
         "Spring Boot"
       ],
       description: "A website to seamlessly conducting and analyzing customer satisfaction surveys.",
@@ -188,7 +191,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Sewa-gi",
-      techStack: ["Laravel", "Saas", "Elasticsearch", "Google APIs", "ArcGis", "Xendit"],
+      techStack: ["Laravel", "Saas", "Elasticsearch", "Google APIs", "ArcGis"],
       description:
         "User-friendly apartment management dashboard.",
       logo: "",

@@ -14,7 +14,9 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <Header />
+        <div className="print:hidden">
+          <Header />
+        </div>
         <div className="block md:flex print:flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-xl md:text-2xl font-bold -mb-1">{RESUME_DATA.name}</h1>
@@ -83,13 +85,6 @@ export default function Page() {
                 </a>
               ) : null}
             </div>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              <Link href="/pdf/cv_2024_eng.pdf" locale={false}>
-                <Button>
-                  <DownloadIcon className="mr-2 h-4 w-4" /> Download Resume
-                </Button>
-              </Link>
-            </div>
           </div>
 
           <Avatar className="size-28 mx-auto max-sm:w-1/2 max-sm:h-1/2 max-sm:mt-6">
@@ -97,6 +92,13 @@ export default function Page() {
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
+        <Section className="print:hidden">
+          <Link href="/pdf/cv_2024_eng.pdf" locale={false}>
+            <Button className="w-full">
+              <DownloadIcon className="mr-2 h-4 w-4" /> Download Resume
+            </Button>
+          </Link>
+        </Section>
         <Section>
           <h2 className="text-xl font-bold mb-2">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
@@ -154,7 +156,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section>
           <h2 className="text-xl font-bold mb-2">Featured Projects</h2>
           <div className="-mx-3">
             {RESUME_DATA.projects.map((project) => {
@@ -174,7 +176,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section>
+        <Section className="scroll-mb-16 print:hidden">
           <h2 className="text-xl font-bold mb-2">Contacts</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground mb-2">
             For collaboration purpose to solve problems together or just to grab some coffee and have a good talk:
