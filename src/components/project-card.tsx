@@ -38,7 +38,7 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-mono text-xs">
+          <CardDescription className="text-xs">
             {description}
           </CardDescription>
         </div>

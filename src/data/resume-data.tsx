@@ -7,9 +7,9 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Jakarta",
   currentJob: "Frontend Developer",
   about:
-    "Front End developer who loves to solve problems🖖",
+    "Frontend developer who loves to solve problems🖖",
   summary:
-    "Passionate developer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work mostly with Vue, Node.js and Typescript.",
+    "Passionate developer specializing in designing and building application with 4+ years of experience. Skilled in technical management, software development, project management, and various programming languages. Currently, I work at PLN Icon Plus with Vue, NodeJs and Typescript.",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
