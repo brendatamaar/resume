@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { EnvelopeOpenIcon, DownloadIcon } from "@radix-ui/react-icons";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import Link from "next/link";
 
 export default function Page() {

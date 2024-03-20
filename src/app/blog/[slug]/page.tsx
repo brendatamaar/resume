@@ -6,7 +6,7 @@ import { formatDate } from '@/components/formatDate'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import RichText from '../../../contentful/RichText'
-import Header from "@/components/header";
+import Header from "@/components/Header";
 
 interface BlogPostPageParams {
     slug: string

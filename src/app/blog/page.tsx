@@ -6,7 +6,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { PostCard } from "@/components/post-card";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 
 async function Home() {
     // Fetch blog posts using the content preview
