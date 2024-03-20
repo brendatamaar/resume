@@ -18,9 +18,9 @@ interface Props {
 export function ProjectCard({ title, description, tags, link, img }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3 my-2">
-      <CardHeader className="">
+      <CardHeader>
         <div className="space-y-1">
-          <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project"/>
+          <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project" />
           <CardTitle className="text-base">
             {link ? (
               <a

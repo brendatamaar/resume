@@ -6,7 +6,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { PostCard } from "@/components/post-card";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 
 async function Home() {
     // Fetch blog posts using the content preview
@@ -19,12 +19,12 @@ async function Home() {
                 <Header />
 
                 <div className="block md:flex print:flex items-center justify-between">
-                    <div className="flex-1 space-y-1.5">
-                        <h1 className="text-xl md:text-2xl font-bold -mb-1">{RESUME_DATA.name}</h1>
-                        <p className="max-w-md text-pretty font-mono text-muted-foreground">
+                    <div className="flex-1 space-y-2.5">
+                        <h1 className="text-xl md:text-2xl font-bold -mb-3">{RESUME_DATA.name}</h1>
+                        <p className="max-w-md text-pretty font-sans text-muted-foreground">
                             {RESUME_DATA.about}
                         </p>
-                        <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+                        <p className="max-w-md items-center text-pretty font-sans text-xs text-muted-foreground">
                             <a
                                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                                 href={RESUME_DATA.locationLink}
@@ -34,7 +34,7 @@ async function Home() {
                                 {RESUME_DATA.location}
                             </a>
                         </p>
-                        <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+                        <div className="flex gap-x-1 pt-1 font-sans text-sm text-muted-foreground print:hidden">
                             {RESUME_DATA.contact.email ? (
                                 <Button
                                     className="size-8"
@@ -44,18 +44,6 @@ async function Home() {
                                 >
                                     <a href={`mailto:${RESUME_DATA.contact.email}`}>
                                         <MailIcon className="size-4" />
-                                    </a>
-                                </Button>
-                            ) : null}
-                            {RESUME_DATA.contact.tel ? (
-                                <Button
-                                    className="size-8"
-                                    variant="outline"
-                                    size="icon"
-                                    asChild
-                                >
-                                    <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                                        <PhoneIcon className="size-4" />
                                     </a>
                                 </Button>
                             ) : null}
@@ -74,7 +62,7 @@ async function Home() {
                             ))}
 
                         </div>
-                        <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+                        <div className="hidden flex-col gap-x-1 font-sans text-sm text-muted-foreground print:flex">
                             {RESUME_DATA.contact.email ? (
                                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                                     <span className="underline">{RESUME_DATA.contact.email}</span>
@@ -94,7 +82,7 @@ async function Home() {
                     </Avatar>
                 </div>
                 <Section>
-                    <h2 className="text-xl font-bold mb-2">Latest Posts</h2>
+                    <h2 className="text-lg font-semibold mb-2">Latest Posts</h2>
                     <div className="-mx-3">
                         {blogPosts.map((blogPost) => {
                             return (
