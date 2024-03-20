@@ -5,24 +5,13 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { formatDate } from "@/components/formatDate"
+
 interface Props {
   title: string;
   link?: string;
   date: string;
   tags: string[];
-}
-
-function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'long', year: 'numeric' };
-  const formatter = new Intl.DateTimeFormat('id-ID', options);
-  const parts = formatter.formatToParts(date);
-
-  const day = parts.find(part => part.type === 'day')?.value ?? '';
-  const month = parts.find(part => part.type === 'month')?.value ?? '';
-  const year = parts.find(part => part.type === 'year')?.value ?? '';
-
-  return `${day} ${month} ${year}`;
 }
 
 export function PostCard({ title, link, date, tags }: Props) {

@@ -2,8 +2,11 @@ import { Metadata, ResolvingMetadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { fetchBlogPost, fetchBlogPosts } from '../../../contentful/blogPosts'
+import { formatDate } from '@/components/formatDate'
+import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import RichText from '../../../contentful/RichText'
+import Header from "@/components/header";
 
 interface BlogPostPageParams {
     slug: string
@@ -48,18 +51,24 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     }
 
     return (
-        <main className="p-[6vw]">
-            <Link href="/">← Posts</Link>
-            <div className="prose mt-8 border-t pt-8">
-                
-                {/* Render the blog post title */}
-                <h1>{blogPost.title}</h1>
+        <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
+            <section className="mx-auto w-full max-w-2xl space-y-4 print:space-y-6">
+                <Header />
+                <div className="border-t pt-8 pb-4">
+                    <Link href="/blog" className='text-sm'>← Back</Link>
+                    <h1 className='text-2xl md:text-2xl font-bold mt-4'>{blogPost.title}</h1>
+                    <p className='text-pretty text-sm font-sans text-muted-foreground mb-2'>{formatDate(blogPost.date)}</p>
+                    <RichText document={blogPost.body} />
+                </div>
+                <span className="inline-flex gap-x-1">
+                    {blogPost.tags.map((tag) => (
+                        <Badge variant="secondary" className="font-sans" key={tag}>
+                            {tag}
+                        </Badge>
+                    ))}
+                </span>
 
-                <p>{blogPost.date}</p>
-
-                {/* Render the blog post body */}
-                <RichText document={blogPost.body} />
-            </div>
+            </section>
         </main>
     )
 }
