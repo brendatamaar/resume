@@ -2,9 +2,10 @@ import { draftMode } from 'next/headers'
 import { fetchBlogPosts } from '../../contentful/blogPosts'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
+import Menu from "@/components/Menu";
 import { PostCard } from "@/components/post-card";
 import Header from "@/components/Header";
 
@@ -98,6 +99,8 @@ async function Home() {
                     </div>
                 </Section>
             </section>
+
+            <Menu />
         </main>
     )
 }

@@ -20,6 +20,18 @@ export default function Header() {
                     </div>
 
                     <div className="flex justify-end text-sm">
+                        <a href="/now" className="hover:underline">
+                            Now
+                        </a>
+                    </div>
+
+                    <div className="flex justify-end text-sm">
+                        <a href="/project" className="hover:underline">
+                            Project
+                        </a>
+                    </div>
+
+                    <div className="flex justify-end text-sm">
                         <a href="/blog" className="hover:underline">
                             Blog
                         </a>

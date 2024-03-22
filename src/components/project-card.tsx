@@ -21,12 +21,12 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
       <CardHeader>
         <div className="space-y-1">
           <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project" />
-          <CardTitle className="text-base">
+          <CardTitle>
             {link ? (
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
+                className="text-medium font-medium my-4 inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
                 <span className="size-1 rounded-full bg-green-500"></span>
@@ -38,7 +38,7 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="text-xs">
+          <CardDescription className="text-font-dark-mode">
             {description}
           </CardDescription>
         </div>
@@ -47,7 +47,6 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
         <div className="mt-2 flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
-              className="px-1 py-0 text-[10px]"
               variant="secondary"
               key={tag}
             >

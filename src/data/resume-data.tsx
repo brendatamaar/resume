@@ -3,13 +3,13 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "Brendatama Akbar Ramadhan",
   initials: "BA",
-  location: "Jakarta, WIB",
+  location: "Jakarta, (GMT+07)",
   locationLink: "https://www.google.com/maps/place/Jakarta",
   currentJob: "Frontend Developer",
   about:
     "Web developer who loves to solve problems🖖",
   summary:
-    "Passionate developer specializing in designing and building application with 4+ years of experience. Currently, I work at PLN Icon Plus with Vue, NodeJs, and TypeScript. Mostly talk about tech, movie, novel, and video game🤖",
+    "Passionate developer specializing in designing and building application with 4+ years of experience.  Skilled in technical management, software development, project management, and various programming languages. Currently, I work at PLN Icon Plus with Vue, NodeJS, and TypeScript. Mostly talk about tech, movie, music, book, and video game.🤖",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
@@ -42,12 +42,12 @@ export const RESUME_DATA = {
       company: "PLN Icon Plus",
       link: "https://plniconplus.co.id/",
       badges: [],
-      title: "Web Software Engineer",
+      title: "Web Software Developer",
       logo: "",
       start: "2022",
       end: "Present",
       description:
-        "PLN Icon Plus (ICON+) is a Subsidiary Entity of State Electricity Company (PLN) Indonesia. ICON+ is focused on serving the needs of PLN Indonesia for telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback, Technologies: Vue.js, Node, Spring Boot",
+        "PLN Icon Plus (ICON+) is a subholding of State Electricity Company (PLN) Indonesia which focuses on telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback. Tech Stack: Vue, Node, Spring Boot",
     },
     {
       company: "Cipta Kreasi",
@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Cipta Kreasi is a company that provides digital marketing services and software development. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. I also implemented several SEO strategies in website optimization, content and link building. Technologies: Laravel, Bootstrap, Wordpress",
+        "Cipta Kreasi is a company that provides digital marketing services and software development. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. I also implemented several SEO strategies in website optimization, content and link building. Technologies: Laravel, Bootstrap",
     },
     {
       company: "Tebuireng Telecom",
@@ -76,9 +76,9 @@ export const RESUME_DATA = {
     "TypeScript",
     "React",
     "Vue",
-    "Next Js",
+    "NextJS",
     "Tailwind",
-    "Node Js",
+    "NodeJS",
     "Express",
     "Spring Boot",
     "Laravel",
@@ -95,7 +95,7 @@ export const RESUME_DATA = {
       techStack: [
         "Main Project",
         "Vue",
-        "Node.js",
+        "NodeJS",
         "Vuetify",
         "Spring Boot"
       ],
@@ -113,7 +113,7 @@ export const RESUME_DATA = {
       techStack: [
         "Main Project",
         "Vue",
-        "Node.js",
+        "NodeJS",
         "Bootstrap",
         "Spring Boot",
         "Kotlin"
@@ -131,7 +131,7 @@ export const RESUME_DATA = {
       title: "Skenatify",
       techStack: [
         "Side Project",
-        "Next JS",
+        "NextJS",
         "React",
         "Radix UI",
         "Typescript",
@@ -151,8 +151,8 @@ export const RESUME_DATA = {
       techStack: [
         "Side Project",
         "React",
-        "Next JS",
-        "Node JS",
+        "NextJS",
+        "NodeJS",
         "Tailwind"
       ],
       description: "Webpage to provide info on legislative candidates for the 2024 Indonesian Election.",
