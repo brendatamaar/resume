@@ -1,9 +1,7 @@
 
 import { RESUME_DATA } from "@/data/resume-data";
 import { GlobeIcon, MailIcon } from "lucide-react";
-import { DownloadIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
-import Link from "next/link"; 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Hero() {
@@ -19,6 +17,7 @@ export default function Hero() {
                     <a
                         className="inline-flex gap-x-1.5 font-light text-muted-foreground dark:text-font-dark-mode align-baseline leading-none hover:underline"
                         href={RESUME_DATA.locationLink}
+                        aria-label="Location"
                         target="_blank"
                     >
                         <GlobeIcon className="size-4" />
@@ -32,7 +31,7 @@ export default function Hero() {
                             size="sm"
                             asChild
                         >
-                            <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                            <a href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Email">
                                 <MailIcon className="size-4" />
                             </a>
                         </Button>
@@ -44,33 +43,28 @@ export default function Hero() {
                             size="sm"
                             asChild
                         >
-                            <a href={social.url}>
+                            <a href={social.url} aria-label={social.name}>
                                 <social.icon className="size-4" />
                             </a>
                         </Button>
                     ))}
 
                     <Button variant="outline" size={"sm"}>
-                        <a href="/pdf/cv_2024_eng.pdf">Download Resume
+                        <a href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
                         </a>
                     </Button>
                 </div>
                 <div className="hidden flex-col gap-x-1 print:flex">
                     {RESUME_DATA.contact.email ? (
-                        <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                        <a href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Print_email">
                             <span className="underline">{RESUME_DATA.contact.email}</span>
                         </a>
                     ) : null}
                     {RESUME_DATA.contact.tel ? (
-                        <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                        <a href={`tel:${RESUME_DATA.contact.tel}`} aria-label="Print_telp">
                             <span className="underline">{RESUME_DATA.contact.tel}</span>
                         </a>
                     ) : null}
-                    <Link href="/pdf/cv_2024_eng.pdf" locale={false}>
-                        <Button className="w-full">
-                            <DownloadIcon className="mr-2 h-4 w-4" /> Download Resume
-                        </Button>
-                    </Link>
                 </div>
             </div>
 

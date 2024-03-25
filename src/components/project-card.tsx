@@ -20,13 +20,15 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
     <Card className="flex flex-col overflow-hidden border border-muted p-3 my-2">
       <CardHeader>
         <div className="space-y-1">
-          <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project" />
+          { img ? (
+            <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project" />
+          ) : (<div className="none"></div>) }
           <CardTitle>
             {link ? (
               <a
                 href={link}
                 target="_blank"
-                className="text-medium font-medium my-4 inline-flex items-center gap-1 hover:underline"
+                className="text-medium font-medium mt-2 mb-4 inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
                 <span className="size-1 rounded-full bg-green-500"></span>
@@ -38,13 +40,13 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="text-font-dark-mode">
+          <CardDescription className="text-muted-foreground dark:text-font-dark-mode">
             {description}
           </CardDescription>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
+        <div className="mt-4 flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
               variant="secondary"

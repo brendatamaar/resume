@@ -10,7 +10,7 @@ function RichText({ document }: RichTextProps) {
 		return null
 	}
 
-	return <div className="[&>p]:mt-6 [&>p]:mb-2 [&>h2]:font-bold [&>ul]:list-disc [&>ul]:ml-3 [&>ol]:list-decimal [&>ol]:ml-3 text-zinc-800 dark:text-zinc-300 md:text-md/relaxed lg:text-md/relaxed xl:text-md/relaxed">
+	return <div className="[&>p]:mt-6 [&>p]:mb-4 [&>p]:text-muted-foreground [&>p]:dark:text-font-dark-mode [&>ul]:text-muted-foreground [&>ul]:dark:text-font-dark-mode [&>ol]:text-muted-foreground [&>ol]:dark:text-font-dark-mode [&>h2]:font-medium [&>ul]:list-disc [&>ul]:ml-3 [&>ol]:list-decimal [&>ol]:ml-3 text-justify">
 		{documentToReactComponents(document)}
 	</div>
 }

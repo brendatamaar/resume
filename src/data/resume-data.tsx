@@ -128,6 +128,19 @@ export const RESUME_DATA = {
       isFeatured: true
     },
     {
+      title: "CheckMATE",
+      techStack: [
+        "Main Project",
+        "Vue",
+        "NodeJS",
+        "Spring Boot"
+      ],
+      description: "CRM system for monitoring, analyzing, and evaluating the maturity levels of company units.",
+      logo: "",
+      img: "",
+      isFeatured: false
+    },
+    {
       title: "Skenatify",
       techStack: [
         "Side Project",
@@ -192,7 +205,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Sewa-gi",
-      techStack: ["Laravel", "Saas", "Elasticsearch", "Google APIs", "ArcGis"],
+      techStack: ["Laravel", "Bootstrap", "Elasticsearch", "Google API"],
       description:
         "User-friendly apartment management dashboard.",
       logo: "",
@@ -201,6 +214,41 @@ export const RESUME_DATA = {
         href: "https://sewagi-web.inspira.web.id",
       },
       img: "/images/sewagi.webp",
+      isFeatured: false
+    },
+    {
+      title: "RRW",
+      techStack: [
+        "Main Project",
+        "Java",
+        "Laravel"
+      ],
+      description: "A tool to assist telemarketing team in recording and processing data related to phone numbers, transactions, members, salaries and reports.",
+      logo: "",
+      img: "",
+      isFeatured: false
+    },
+    {
+      title: "Translight",
+      techStack: [
+        "Side Project",
+        "Bootstrap"
+      ],
+      description: "Landing page for a transportation company.",
+      logo: "",
+      img: "",
+      isFeatured: false
+    },
+    {
+      title: "Tratus",
+      techStack: [
+        "Main Project",
+        "Java",
+        "SQLite"
+      ],
+      description: " Mobile app to view information about tourist sites in West Java.",
+      logo: "",
+      img: "",
       isFeatured: false
     },
   ],

@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import { fetchBlogPost, fetchBlogPosts } from '../../../contentful/blogPosts'
 import { formatDate } from '@/components/formatDate'
 import { Badge } from '@/components/ui/badge'
-import { RESUME_DATA } from "@/data/resume-data";
 import Menu from "@/components/Menu";
 import Link from 'next/link'
 import RichText from '../../../contentful/RichText'
@@ -57,14 +56,17 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
             <section className="mx-auto w-full max-w-2xl space-y-4 print:space-y-6 ">
                 <Header />
                 <div className="border-t border-b pt-8 pb-4">
-                    <Link href="/blog" className='text-sm'>← Back</Link>
-                    <h1 className='text-2xl md:text-2xl font-bold mt-4'>{blogPost.title}</h1>
-                    <p className='text-pretty text-sm font-sans text-muted-foreground mb-2'>{formatDate(blogPost.date)}</p>
+                    <Link href="/blog">← Back</Link>
+                    <h1 className='text-medium font-medium mt-4'>{blogPost.title}</h1>
+                    <p className='text-muted-foreground dark:text-font-dark-mode my-2'>{formatDate(blogPost.date)}</p>
                     <RichText document={blogPost.body} />
+                </div>
+                <div className="mt-4">
+                    <span className="font-medium">Tag: </span>
                 </div>
                 <span className="inline-flex gap-x-1">
                     {blogPost.tags.map((tag) => (
-                        <Badge variant="secondary" className="font-sans" key={tag}>
+                        <Badge variant="secondary" key={tag}>
                             {tag}
                         </Badge>
                     ))}

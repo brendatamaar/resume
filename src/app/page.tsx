@@ -81,7 +81,7 @@ export default function Page() {
         </Section>
 
         <Section>
-          <h2 className="font-medium text-medium mb-8">Featured Projects</h2>
+          <h2 className="font-medium text-medium">Featured Projects</h2>
           <div className="mb-6">
             {RESUME_DATA.projects.map((project) => {
               if (project.isFeatured) {
@@ -98,6 +98,11 @@ export default function Page() {
               }
             })}
           </div>
+          <a href="/project" aria-label="See_more">
+            <Button variant={"outline"} className="mb-6">
+              See More
+            </Button>
+          </a>
         </Section>
 
         <Section className="scroll-mb-16 print:hidden">
