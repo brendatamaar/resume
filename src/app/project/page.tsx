@@ -1,13 +1,6 @@
-import { draftMode } from 'next/headers'
-import { fetchBlogPosts } from '../../contentful/blogPosts'
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { NOW_DATA } from "@/data/now-data";
 import Menu from "@/components/Menu";
-import { PostCard } from "@/components/post-card";
 import { ProjectCard } from '@/components/project-card';
 import Header from "@/components/Header";
 import Hero from '@/components/Hero';
@@ -19,7 +12,7 @@ async function Project() {
                 <Hero />
                 <Section>
                     <h2 className='font-medium text-medium mb-8'>Projects</h2>
-                    <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+                    <div className="-mx-3">
                         {RESUME_DATA.projects.map((project) => {
                             return (
                                 <ProjectCard

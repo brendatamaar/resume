@@ -28,13 +28,13 @@ export default function Page() {
           <div className="flex flex-col gap-6">
             {RESUME_DATA.work.map((work) => {
               return (
-                <div className="flex mb-6" key={work.company}>
+                <div className="flex flex-col md:flex-row mb-6" key={work.company}>
                   <div className="mr-8 max-w-[120px] w-full text-muted-foreground dark:text-font-dark-mode">
                     {work.start} - {work.end}
                   </div>
                   <div className="flex flex-col flex-1">
                     <h3 className="text-medium font-medium">{work.company}</h3>
-                    <p className="text-muted-foreground dark:text-font-dark-mode mb-6">
+                    <p className="text-muted-foreground dark:text-font-dark-mode mb-6 mt-1">
                       {work.title}
                     </p>
                     {work.description ? (
@@ -52,13 +52,13 @@ export default function Page() {
           <h2 className="font-medium text-medium mb-8">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <div className="flex mb-6" key={education.school}>
+              <div className="flex flex-col md:flex-row mb-6" key={education.school}>
                 <div className="mr-8 max-w-[120px] w-full text-muted-foreground dark:text-font-dark-mode">
                   {education.start} - {education.end}
                 </div>
                 <div className="flex flex-col flex-1">
                   <h3 className="text-medium font-medium">{education.school}</h3>
-                  <p className="text-muted-foreground dark:text-font-dark-mode mb-6">
+                  <p className="text-muted-foreground dark:text-font-dark-mode mb-6 mt-1">
                     {education.degree}
                   </p>
                   {education.desc ? (

@@ -13,8 +13,7 @@ export const NOW_DATA = {
     ],
     personal: [
         "In November 2023 I married the best woman I ever dreamed of.",
-        "Replaying Fallout: New Vegas for the old time sake.",
-        "Anticipating the Fallout series in Prime, but gonna lower my expectation for the series.",
+        "Replaying Fallout: New Vegas and Anno 1800 for the old time sake.",
     ],
     hobby: [
         {
