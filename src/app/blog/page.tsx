@@ -8,6 +8,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import Menu from "@/components/Menu";
 import { PostCard } from "@/components/post-card";
 import Header from "@/components/Header";
+import Link from 'next/link';
 
 async function Home() {
     // Fetch blog posts using the content preview
@@ -26,14 +27,14 @@ async function Home() {
                             {RESUME_DATA.about}
                         </p>
                         <p className="max-w-md items-center text-pretty font-sans text-xs text-muted-foreground">
-                            <a
+                            <Link
                                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                                 href={RESUME_DATA.locationLink}
                                 target="_blank"
                             >
                                 <GlobeIcon className="size-3" />
                                 {RESUME_DATA.location}
-                            </a>
+                            </Link>
                         </p>
                         <div className="flex gap-x-1 pt-1 font-sans text-sm text-muted-foreground print:hidden">
                             {RESUME_DATA.contact.email ? (
@@ -43,9 +44,9 @@ async function Home() {
                                     size="icon"
                                     asChild
                                 >
-                                    <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                                    <Link href={`mailto:${RESUME_DATA.contact.email}`}>
                                         <MailIcon className="size-4" />
-                                    </a>
+                                    </Link>
                                 </Button>
                             ) : null}
                             {RESUME_DATA.contact.social.map((social) => (
@@ -56,23 +57,23 @@ async function Home() {
                                     size="icon"
                                     asChild
                                 >
-                                    <a href={social.url}>
+                                    <Link href={social.url}>
                                         <social.icon className="size-4" />
-                                    </a>
+                                    </Link>
                                 </Button>
                             ))}
 
                         </div>
                         <div className="hidden flex-col gap-x-1 font-sans text-sm text-muted-foreground print:flex">
                             {RESUME_DATA.contact.email ? (
-                                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                                <Link href={`mailto:${RESUME_DATA.contact.email}`}>
                                     <span className="underline">{RESUME_DATA.contact.email}</span>
-                                </a>
+                                </Link>
                             ) : null}
                             {RESUME_DATA.contact.tel ? (
-                                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                                <Link href={`tel:${RESUME_DATA.contact.tel}`}>
                                     <span className="underline">{RESUME_DATA.contact.tel}</span>
-                                </a>
+                                </Link>
                             ) : null}
                         </div>
                     </div>

@@ -6,10 +6,11 @@ import {
 } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { formatDate } from "@/components/formatDate"
+import Link from "next/link";
 
 interface Props {
   title: string;
-  link?: string;
+  link: string;
   date: string;
   tags: string[];
 }
@@ -23,9 +24,9 @@ export function PostCard({ title, link, date, tags }: Props) {
             <div className="flex items-center justify-between space-y-3">
               <div className="block">
                 <h3 className="inline-flex items-center justify-center gap-x-1 leading-none">
-                  <a className="text-medium font-medium inline-flex items-center gap-1 font-sans hover:underline" href={link}>
+                  <Link className="text-medium font-medium inline-flex items-center gap-1 font-sans hover:underline" href={link}>
                     {title}
-                  </a>
+                  </Link>
                   <span className="size-1 rounded-full bg-green-500"></span>
                 </h3>
               </div>

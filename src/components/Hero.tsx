@@ -3,6 +3,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 export default function Hero() {
 
@@ -14,7 +15,7 @@ export default function Hero() {
                     {RESUME_DATA.about}
                 </p>
                 <p className="max-w-md items-center">
-                    <a
+                    <Link
                         className="inline-flex gap-x-1.5 font-light text-muted-foreground dark:text-font-dark-mode align-baseline leading-none hover:underline"
                         href={RESUME_DATA.locationLink}
                         aria-label="Location"
@@ -22,7 +23,7 @@ export default function Hero() {
                     >
                         <GlobeIcon className="size-4" />
                         {RESUME_DATA.location}
-                    </a>
+                    </Link>
                 </p>
                 <div className="flex gap-x-1 pt-1 print:hidden">
                     {RESUME_DATA.contact.email ? (
@@ -31,9 +32,9 @@ export default function Hero() {
                             size="sm"
                             asChild
                         >
-                            <a href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Email">
+                            <Link href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Email">
                                 <MailIcon className="size-4" />
-                            </a>
+                            </Link>
                         </Button>
                     ) : null}
                     {RESUME_DATA.contact.social.map((social) => (
@@ -43,27 +44,27 @@ export default function Hero() {
                             size="sm"
                             asChild
                         >
-                            <a href={social.url} aria-label={social.name}>
+                            <Link href={social.url} aria-label={social.name}>
                                 <social.icon className="size-4" />
-                            </a>
+                            </Link>
                         </Button>
                     ))}
 
                     <Button variant="outline" size={"sm"}>
-                        <a href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
-                        </a>
+                        <Link href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
+                        </Link>
                     </Button>
                 </div>
                 <div className="hidden flex-col gap-x-1 print:flex">
                     {RESUME_DATA.contact.email ? (
-                        <a href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Print_email">
+                        <Link href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Print_email">
                             <span className="underline">{RESUME_DATA.contact.email}</span>
-                        </a>
+                        </Link>
                     ) : null}
                     {RESUME_DATA.contact.tel ? (
-                        <a href={`tel:${RESUME_DATA.contact.tel}`} aria-label="Print_telp">
+                        <Link href={`tel:${RESUME_DATA.contact.tel}`} aria-label="Print_telp">
                             <span className="underline">{RESUME_DATA.contact.tel}</span>
-                        </a>
+                        </Link>
                     ) : null}
                 </div>
             </div>

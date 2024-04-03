@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import Menu from "@/components/Menu";
 import { Section } from "@/components/ui/section";
@@ -7,10 +9,25 @@ import { ProjectCard } from "@/components/project-card";
 import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Link from "next/link";
+
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+}
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
+    <motion.main
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+      className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-transparent dark:bg-transparent print:space-y-6">
         <div className="print:hidden">
           <Header />
@@ -98,11 +115,11 @@ export default function Page() {
               }
             })}
           </div>
-          <a href="/project" aria-label="See_more">
+          <Link href="/project" aria-label="See_more">
             <Button variant={"outline"} className="mb-6">
               See More
             </Button>
-          </a>
+          </Link>
         </Section>
 
         <Section className="scroll-mb-16 print:hidden">
@@ -110,15 +127,15 @@ export default function Page() {
           <p className="text-muted-foreground dark:text-font-dark-mode mb-4">
             For collaboration purpose to solve problems together or just to grab a coffee and have a good talk:
           </p>
-          <a href="mailto:brendatamaa@gmail.com">
+          <Link href="mailto:brendatamaa@gmail.com">
             <Button variant={"outline"} className="mb-6">
               <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Let&apos;s connect
             </Button>
-          </a>
+          </Link>
         </Section>
       </section>
 
       <Menu />
-    </main>
+    </motion.main>
   );
 }
