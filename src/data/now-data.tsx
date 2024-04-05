@@ -1,19 +1,19 @@
 
 export const NOW_DATA = {
     work: [
-        "🚀 I am working at PLN Icon Plus as Web Software Developer, building B2G SaaS tax accounting product.",
+        "🚀 I am working at PLN Icon Plus as a Web Software Developer, building a SaaS tax accounting product.",
         "🛠️ Working mostly with Vue/React, Typescript and Tailwind.",
-        "🌱 Currently learning the universe of Go and Vue framework like Nuxt and Svelte."
+        "🌱 Currently learning the universe of Go and Vue frameworks like Nuxt and Svelte."
     ],
     target: [
-        "📜 Eager to learn about web architecture, system design and product management.",
-        "🗒️ Create review log for books and movies, but too lazy and busy to do it.😹",
+        "📜 Eager to learn about web architecture, system design, and product management.",
+        "🗒️ Create review logs for books and movies, but too lazy and busy to do it.😹",
         "🎯 Revisit Leetcode after several years of inactivity. Gonna strengthen DSA again after not practicing for a long time.",
-        "📓 Write blog just for fun."
+        "📓 Write blogs just for fun."
     ],
     personal: [
         "In November 2023 I married the best woman I ever dreamed of.",
-        "Replaying Fallout: New Vegas and Anno 1800 for the old time sake.",
+        "Replaying Fallout: New Vegas and Anno 1800.",
     ],
     hobby: [
         {
