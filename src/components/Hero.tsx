@@ -51,8 +51,8 @@ export default function Hero() {
                     ))}
 
                     <Button variant="outline" size={"sm"}>
-                        <Link href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
-                        </Link>
+                        <a href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
+                        </a>
                     </Button>
                 </div>
                 <div className="hidden flex-col gap-x-1 print:flex">

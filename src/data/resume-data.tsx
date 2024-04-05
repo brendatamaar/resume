@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   about:
     "Web developer who loves to solve problems🖖",
   summary:
-    "Passionate developer specializing in designing and building application with 4+ years of experience.  Skilled in technical management, software development, project management, and various programming languages. Currently, I work at PLN Icon Plus with Vue, NodeJS, and TypeScript. Mostly talk about tech, movie, music, book, and video game.🤖",
+    "Passionate developer specializing in designing and building application with 4+ years of experience.  Skilled in technical management, project management, software development, and various programming languages. Currently, I work at PLN Icon Plus with Vue, NodeJS, and TypeScript. Mostly talk about tech, movie, music, book, and video game.🤖",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
@@ -47,7 +47,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Present",
       description:
-        "PLN Icon Plus (ICON+) is a subholding of State Electricity Company (PLN) Indonesia which focuses on telecommunication networks, software development and information technology services. I worked on improving web products by delivering several new major features based on user feedback. Tech Stack: Vue, Node, Spring Boot",
+        "PLN Icon Plus (ICON+) is a subholding of State Electricity Company (PLN) Indonesia) is a subholding of State Electricity Company (PLN) Indonesia, specializing in telecommunications networks, software development, and information technology services. I worked on improving web products by delivering several new major features based on user feedback. Tech Stack: Vue, Node, Spring Boot",
     },
     {
       company: "Cipta Kreasi",
@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Cipta Kreasi is a company that provides digital marketing services and software development. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. I also implemented several SEO strategies in website optimization, content and link building. Technologies: Laravel, Bootstrap",
+        "Cipta Kreasi is an agency providing digital marketing services along with software development solutions. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. Tech Stack: Laravel, AMP, Bootstrap",
     },
     {
       company: "Tebuireng Telecom",
@@ -69,25 +69,20 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2020",
       description:
-        "Tebuireng Telecom is a company that provides system integrator and software development solutions. I assisted in developing web components, integrating API and resolving front-end related issues.",
+        "I assisted in developing web components, integrating API and resolving front-end related issues.",
     },
   ],
   skills: [
     "TypeScript",
     "React",
-    "Vue",
     "NextJS",
+    "Remix",
+    "Vue",
+    "NuxtJS",
     "Tailwind",
-    "NodeJS",
-    "Express",
+    "NodeJS", 
     "Spring Boot",
     "Laravel",
-    "PostgreSQL",
-    "MongoDB",
-    "Grafana",
-    "Jest",
-    "Storybook",
-    "Playwright"
   ],
   projects: [
     {
@@ -96,10 +91,9 @@ export const RESUME_DATA = {
         "Main Project",
         "Vue",
         "NodeJS",
-        "Vuetify",
         "Spring Boot"
       ],
-      description: "B2G SaaS product designed to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes(DJP) Indonesia.",
+      description: "B2G SaaS product designed to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes (DJP) Indonesia.",
       logo: "",
       link: {
         label: "air-tax",
@@ -114,7 +108,6 @@ export const RESUME_DATA = {
         "Main Project",
         "Vue",
         "NodeJS",
-        "Bootstrap",
         "Spring Boot",
         "Kotlin"
       ],
@@ -146,7 +139,7 @@ export const RESUME_DATA = {
         "Side Project",
         "NextJS",
         "React",
-        "Radix UI",
+        "Tailwind",
         "Typescript",
         "Spotify API"
       ],
@@ -179,7 +172,7 @@ export const RESUME_DATA = {
     },
       {
       title: "datatech",
-      techStack: ["Side Project", "Bootstrap"],
+      techStack: ["Side Project", "AMP", "Bootstrap"],
       description:
         "Landing page for an IT consultant company.",
       logo: "",
@@ -223,7 +216,7 @@ export const RESUME_DATA = {
         "Java",
         "Laravel"
       ],
-      description: "A tool to assist telemarketing team in recording and processing data related to phone numbers, transactions, members, salaries and reports.",
+      description: "A tool to assist SEO team in processing web reports.",
       logo: "",
       img: "",
       isFeatured: false

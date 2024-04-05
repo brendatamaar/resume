@@ -20,9 +20,9 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
     <Card className="flex flex-col overflow-hidden border border-muted p-3 my-2">
       <CardHeader>
         <div className="space-y-1">
-          { img ? (
+          {img ? (
             <img className="w-full h-3/4 rounded-md mb-2 mx-auto" src={img} alt="project" />
-          ) : (<div className="none"></div>) }
+          ) : (<div className="none"></div>)}
           <CardTitle>
             {link ? (
               <a
@@ -34,7 +34,7 @@ export function ProjectCard({ title, description, tags, link, img }: Props) {
                 <span className="size-1 rounded-full bg-green-500"></span>
               </a>
             ) : (
-              title
+              <span className="text-medium font-medium mt-2 mb-4 inline-flex items-center gap-1 hover:underline">{title}</span>
             )}
           </CardTitle>
           <div className="hidden font-mono text-xs underline print:visible">
