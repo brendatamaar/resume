@@ -47,7 +47,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Present",
       description:
-        "PLN Icon Plus (ICON+) is a subholding of State Electricity Company (PLN) Indonesia) is a subholding of State Electricity Company (PLN) Indonesia, specializing in telecommunications networks, software development, and information technology services. I worked on improving web products by delivering several new major features based on user feedback. Tech Stack: Vue, Node, Spring Boot",
+        "PLN Icon Plus (ICON+) is a subholding of State Electricity Company (PLN) Indonesia, specializing in telecommunications networks, software development, and information technology services. I worked on improving web products by delivering several new major features based on user feedback.",
     },
     {
       company: "Cipta Kreasi",
@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Cipta Kreasi is an agency providing digital marketing services along with software development solutions. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency. Tech Stack: Laravel, AMP, Bootstrap",
+        "Cipta Kreasi is an agency providing digital marketing services along with software development solutions. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency.",
     },
     {
       company: "Tebuireng Telecom",
