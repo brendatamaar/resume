@@ -1,10 +1,3 @@
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
 import { formatDate } from "@/components/formatDate"
 import Link from "next/link";
 
@@ -12,40 +5,19 @@ interface Props {
   title: string;
   link: string;
   date: string;
-  tags: string[];
 }
 
-export function PostCard({ title, link, date, tags }: Props) {
+export function PostCard({ title, link, date }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-3 my-2 hover:bg-zinc-50 dark:hover:bg-slate-700">
-      <CardHeader>
-        <div className="space-y-1">
-          <CardTitle>
-            <div className="flex items-center justify-between space-y-3">
-              <div className="block">
-                <h3 className="inline-flex items-center justify-center gap-x-1 leading-none">
-                  <Link className="text-medium font-medium inline-flex items-center gap-1 font-sans hover:underline" href={link}>
-                    {title}
-                  </Link>
-                  <span className="size-1 rounded-full bg-green-500"></span>
-                </h3>
-              </div>
-              <div className="text-muted-foreground text-sm dark:text-font-dark-mode">
-                {formatDate(date)}
-              </div>
-            </div>
-          </CardTitle>
+    <div>
+      <Link href={link} target="_blank">
+        <div className="grid grid-cols-12 gap-2 border-b border-opacity-50 py-2 text-muted-foreground hover:text-black dark:hover:text-white dark:text-font-dark-mode mb-2 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+          <div className="col-span-3">{formatDate(date)}</div>
+          <div className="col-span-8">{title}</div>
+          <div className="flex justify-end col-span-1"><span>→</span></div>
         </div>
-      </CardHeader>
-      <CardContent>
-        <span className="inline-flex gap-x-1 mt-2">
-          {tags.map((tag) => (
-            <Badge variant="secondary" key={tag}>
-              {tag}
-            </Badge>
-          ))}
-        </span>
-      </CardContent>
-    </Card>
+      </Link>
+    </div>
+
   );
 }

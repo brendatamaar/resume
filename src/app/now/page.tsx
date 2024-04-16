@@ -1,13 +1,6 @@
-import { draftMode } from 'next/headers'
-import { fetchBlogPosts } from '../../contentful/blogPosts'
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { RESUME_DATA } from "@/data/resume-data";
 import { NOW_DATA } from "@/data/now-data";
 import Menu from "@/components/Menu";
-import { PostCard } from "@/components/post-card";
 import Header from "@/components/Header";
 import Hero from '@/components/Hero';
 async function Now() {
@@ -19,7 +12,7 @@ async function Now() {
                 <Section>
                     <h2 className='font-medium text-medium mb-8'>What is this page?</h2>
                     <div className="text-muted-foreground dark:text-font-dark-mode mb-6">
-                        This is a <a className='underline' href='https://nownownow.com/about'>now</a> page, containing my life updates and journal.
+                        This is a <a className='underline' href='https://nownownow.com/about' target="_blank">now</a> page, containing my life updates and journal.
                     </div>
                 </Section>
                 <Section>

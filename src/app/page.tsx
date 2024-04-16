@@ -11,10 +11,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Link from "next/link";
 
-const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-}
 
 export default function Page() {
   return (
@@ -117,7 +113,7 @@ export default function Page() {
           </div>
           <Link href="/project" aria-label="See_more">
             <Button variant={"outline"} className="mb-6">
-              See More
+              See more project
             </Button>
           </Link>
         </Section>
@@ -125,7 +121,7 @@ export default function Page() {
         <Section className="scroll-mb-16 print:hidden">
           <h2 className="font-medium text-medium mb-8">Contacts</h2>
           <p className="text-muted-foreground dark:text-font-dark-mode mb-4">
-            For collaboration purpose to solve problems together or just to grab a coffee and have a good talk:
+          If you need expertise in developing software, designing products, solving problems or building teams, or just to grab some coffee and have a good talk, please reach out via:
           </p>
           <Link href="mailto:brendatamaa@gmail.com">
             <Button variant={"outline"} className="mb-6">

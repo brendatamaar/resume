@@ -9,7 +9,7 @@ export default function Hero() {
 
     return (
         <div className="block md:flex print:flex items-center justify-between">
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-8">
                 <h1 className="text-medium font-medium -mb-4">{RESUME_DATA.name}</h1>
                 <p className="text-medium text-muted-foreground dark:text-font-dark-mode max-w-md">
                     {RESUME_DATA.about}

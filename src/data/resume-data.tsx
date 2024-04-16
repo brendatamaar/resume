@@ -3,13 +3,13 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "Brendatama Akbar Ramadhan",
   initials: "BA",
-  location: "Jakarta (GMT+07)",
+  location: "Jakarta, Indonesia (GMT +07)",
   locationLink: "https://www.google.com/maps/place/Jakarta",
   currentJob: "Frontend Developer",
   about:
-    "Web developer specializing in building applications🖖",
+    "Web developer passionate about creating simple, accessible services that improve people’s lives🖖",
   summary:
-    "I am a web developer with 4 years of experience. I build stuff mostly with Vue/React, Typescript, and Tailwind. Currently, I am working as a Web Software Developer at PLN Icon Plus. Have a keen interest in tech, RPG games, and good stories.🤖",
+    "I am a web software developer specializing in designing and building applications with a focus on simplicity, usability, and responsiveness. Currently, I work as a Web Software Developer at PLN Icon Plus. Have a keen interest in tech, RPG games, and good stories.🤖",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {

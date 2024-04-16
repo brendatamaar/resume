@@ -4,6 +4,7 @@ import Menu from "@/components/Menu";
 import { ProjectCard } from '@/components/project-card';
 import Header from "@/components/Header";
 import Hero from '@/components/Hero';
+
 async function Project() {
     return (
         <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
