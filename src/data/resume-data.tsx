@@ -5,11 +5,11 @@ export const RESUME_DATA = {
   initials: "BA",
   location: "Jakarta, Indonesia (GMT +07)",
   locationLink: "https://www.google.com/maps/place/Jakarta",
-  currentJob: "Frontend Developer",
+  currentJob: "Web Software Developer",
   about:
-    "Web developer passionate about creating simple, accessible services that improve people’s lives🖖",
+    "Web developer passionate about creating simple, accessible services to improve people’s lives.🖖",
   summary:
-    "I am a web software developer specializing in designing and building applications with a focus on simplicity, usability, and responsiveness. Currently, I work as a Web Software Developer at PLN Icon Plus. Have a keen interest in tech, RPG games, and good stories.🤖",
+    "I am a web software developer specializing in designing and building applications with a focus on simplicity and usability. Currently, I work at PLN Icon Plus as a Web Software Developer. Have a keen interest in tech, RPG games, and good stories.🤖",
   avatarUrl: "https://avatars.githubusercontent.com/u/15965200?s=400&u=f240353cd552d7409e345f8d367046014c99161b&v=4",
   personalWebsiteUrl: "https://brendatama.vercel.app/",
   contact: {
@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Cipta Kreasi is an agency providing digital marketing services along with software development solutions. I designed and developed SEO-optimized landing pages that are search engine friendly for companies and agency.",
+        "Cipta Kreasi is an agency providing digital marketing services and software development solutions. I designed and developed landing pages that are SEO-optimized and search engine friendly for companies and agencies.",
     },
     {
       company: "Tebuireng Telecom",

@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
 
             <Avatar className="size-28 mx-auto max-sm:w-1/2 max-sm:h-1/2 max-sm:mt-6">
-                <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+                <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} rel="dns-prefetch" />
                 <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
             </Avatar>
         </div>
