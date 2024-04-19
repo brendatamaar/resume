@@ -1,17 +1,33 @@
+"use client"
 import React from 'react';
 import { Document as RichTextDocument, BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
-
+import { CopyBlock, dracula } from "react-code-blocks";
 type RichTextProps = {
 	document: RichTextDocument | null;
 };
 
+const find = (array: any, condition: any) => {
+	return array.find((item: any) => condition(item));
+};
 const renderOptions: Options = {
 	renderNode: {
-		[BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => <p className="my-8">{children}</p>,
+		[BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => {
+			if (find(node.content[0].marks, (mark: { type: string; }) => mark.type === 'code')) {
+				return <CopyBlock
+					text={node.content[0].value}
+					language={"tsx"}
+					wrapLongLines={true}
+					codeBlock={true}
+					showLineNumbers={false}
+					theme={dracula}
+				/>
+			}
+			return <p className="my-8">{children}</p>
+		},
 		[BLOCKS.OL_LIST]: (node: any, children: React.ReactNode) => <ol className="ml-3 list-decimal">{children}</ol>,
-		[BLOCKS.UL_LIST]: (node: any, children: React.ReactNode) => <ul className="ml-3 list-disc">{children}</ul>,
-		[BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) => <li className="my-2 [&>p]:my-0">{children}</li>,
+		[BLOCKS.UL_LIST]: (node: any, children: React.ReactNode) => <ul key={node.data.id || JSON.stringify(node.data)} className="ml-3 list-disc">{children}</ul>,
+		[BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) => <li key={node.data.id || JSON.stringify(node.data)} className="my-2 [&>p]:my-0">{children}</li>,
 		[BLOCKS.QUOTE]: (node: any, children: React.ReactNode) => <blockquote className="my-8 p-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">{children}</blockquote>,
 		[BLOCKS.HEADING_1]: (node: any, children: React.ReactNode) => <h1 className="text-black dark:text-white text-medium font-medium my-4">{children}</h1>,
 		[BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => <h2 className="text-black dark:text-white text-medium font-medium my-4">{children}</h2>,
@@ -68,21 +84,6 @@ const renderOptions: Options = {
 		[MARKS.BOLD]: (text) => <strong className='text-medium font-medium text-black dark:text-white'>{text}</strong>,
 		[MARKS.ITALIC]: (text) => <em>{text}</em>,
 		[MARKS.UNDERLINE]: (text) => <u>{text}</u>,
-		[MARKS.CODE]: (text) =>
-			<div className="relative max-w-2xl mx-auto">
-				<div className="bg-gray-900 text-white p-4 rounded-md">
-					<div className="flex justify-between items-center mb-6">
-						<span className="text-gray-400">Code:</span>
-					</div>
-					<div className="overflow-x-auto pb-6">
-						<pre >
-							<code id='code' className="text-gray-300">
-								{text}
-							</code>
-						</pre>
-					</div>
-				</div>
-			</div>
 	},
 	preserveWhitespace: true
 };
