@@ -144,7 +144,7 @@ export const RESUME_DATA = {
         "NodeJS",
         "Kotlin"
       ],
-      description: "B2G SaaS product designed to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes (DJP) Indonesia.",
+      description: "Digital platform to facilitate electric stove data for PLN employees.",
       logo: "",
       link: {
         label: "vc",

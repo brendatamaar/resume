@@ -17,10 +17,12 @@ export default function Header() {
     }
 
     const toggleTheme = () => {
-        if (!document.startViewTransition) {
+        const documentWithTransition = document as Document & { startViewTransition?: (callback: () => void) => void };
+
+        if (!documentWithTransition.startViewTransition) {
             switchTheme();
         } else {
-            document.startViewTransition(() => switchTheme());
+            documentWithTransition.startViewTransition(() => switchTheme());
         }
     };
 
