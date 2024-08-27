@@ -49,7 +49,7 @@ async function Now() {
                 </Section>
 
                 <Section>
-                    <h2 className="font-medium text-medium mb-8">Connect with My Hobby</h2>
+                    <h2 className="font-medium text-medium mb-8">Connect with Me</h2>
                     <div className="text-muted-foreground dark:text-font-dark-mode mb-20 flex flex-col gap-1">
                         {NOW_DATA.hobby.map((hobby) => {
                             return <ul key={hobby.hobby} className="list-disc ml-3">

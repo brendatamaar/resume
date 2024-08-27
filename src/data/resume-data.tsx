@@ -76,12 +76,11 @@ export const RESUME_DATA = {
     "TypeScript",
     "React",
     "NextJS",
-    "Remix",
     "Vue",
-    "NuxtJS",
     "Tailwind",
     "NodeJS", 
     "Spring Boot",
+    "Quarkus",
     "Laravel",
   ],
   projects: [
@@ -93,7 +92,7 @@ export const RESUME_DATA = {
         "NodeJS",
         "Spring Boot"
       ],
-      description: "B2G SaaS product designed to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes (DJP) Indonesia.",
+      description: "B2G product to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes (DJP) Indonesia.",
       logo: "",
       link: {
         label: "air-tax",
@@ -118,6 +117,40 @@ export const RESUME_DATA = {
         href: "https://cheskp-mobile.pln.co.id/",
       },
       img: "/images/cheskp.webp",
+      isFeatured: true
+    },
+    {
+      title: "Virtual Cubicle",
+      techStack: [
+        "Main Project",
+        "Vue",
+        "NodeJS",
+        "Tailwind"
+      ],
+      description: "Web platform to digitalize and streamline all core business operations of PLN Enjiniring.",
+      logo: "",
+      link: {
+        label: "vc",
+        href: "https://newvcubicle.plne.co.id",
+      },
+      img: "/images/vc.webp",
+      isFeatured: true
+    },
+    {
+      title: "ESDS",
+      techStack: [
+        "Main Project",
+        "Vue",
+        "NodeJS",
+        "Kotlin"
+      ],
+      description: "B2G SaaS product designed to simplify tax calculation, reporting, and payment processes, integrated directly with the Directorate General of Taxes (DJP) Indonesia.",
+      logo: "",
+      link: {
+        label: "vc",
+        href: "https://isds.pln.co.id",
+      },
+      img: "/images/esds.webp",
       isFeatured: true
     },
     {
@@ -168,7 +201,7 @@ export const RESUME_DATA = {
         href: "https://kenali-caleg.vercel.app/",
       },
       img: "/images/kenali-caleg.webp",
-      isFeatured: true
+      isFeatured: false
     },
       {
       title: "datatech",
