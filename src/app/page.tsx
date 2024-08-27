@@ -7,12 +7,16 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
+import { useTranslations } from 'next-intl';
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Link from "next/link";
 
 
 export default function Page() {
+  const t = useTranslations('HomePage');
+
   return (
     <motion.main
       initial={{ x: 300, opacity: 0 }}
@@ -30,14 +34,14 @@ export default function Page() {
         </div>
         <Hero />
         <Section>
-          <h2 className="font-medium text-medium mb-8">About</h2>
+          <h2 className="font-medium text-medium mb-8">{t('about')}</h2>
           <p className="text-muted-foreground dark:text-font-dark-mode mb-6">
             {RESUME_DATA.summary}
           </p>
         </Section>
 
         <Section>
-          <h2 className="font-medium text-medium mb-8">Work Experience</h2>
+          <h2 className="font-medium text-medium mb-8">{t('workExperience')}</h2>
           <div className="flex flex-col gap-6">
             {RESUME_DATA.work.map((work) => {
               return (
@@ -62,7 +66,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="font-medium text-medium mb-8">Education</h2>
+          <h2 className="font-medium text-medium mb-8">{t('education')}</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <div className="flex flex-col md:flex-row mb-6" key={education.school}>
@@ -85,7 +89,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="font-medium text-medium mb-8">Key Skills</h2>
+          <h2 className="font-medium text-medium mb-8">{t('keySkills')}</h2>
           <div className="flex flex-wrap gap-1 mb-6">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
@@ -94,7 +98,7 @@ export default function Page() {
         </Section>
 
         <Section>
-          <h2 className="font-medium text-medium">Featured Projects</h2>
+          <h2 className="font-medium text-medium">{t('featuredProjects')}</h2>
           <div className="mb-6">
             {RESUME_DATA.projects.map((project) => {
               if (project.isFeatured) {
@@ -113,19 +117,19 @@ export default function Page() {
           </div>
           <Link href="/project" aria-label="See_more">
             <Button variant={"outline"} className="mb-6">
-              See more project
+              {t('featuredMoreProjects')}
             </Button>
           </Link>
         </Section>
 
         <Section className="scroll-mb-16 print:hidden">
-          <h2 className="font-medium text-medium mb-8">Contacts</h2>
+          <h2 className="font-medium text-medium mb-8">{t('contacts')}</h2>
           <p className="text-muted-foreground dark:text-font-dark-mode mb-4">
-          If you need expertise in developing software, designing products, solving problems or building teams, or just to grab some coffee and have a good talk, please reach out via:
+            {t('contactsMessage')}
           </p>
           <Link href="mailto:brendatamaa@gmail.com">
             <Button variant={"outline"} className="mb-6">
-              <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Let&apos;s connect
+              <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> {t('contactsConnect')}
             </Button>
           </Link>
         </Section>

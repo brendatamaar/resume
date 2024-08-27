@@ -3,9 +3,11 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useTranslations } from 'next-intl';
 import Link from "next/link";
 
 export default function Hero() {
+    const t = useTranslations('Header');
 
     return (
         <div className="block md:flex print:flex items-center justify-between">
@@ -51,7 +53,7 @@ export default function Hero() {
                     ))}
 
                     <Button variant="outline" size={"sm"}>
-                        <a href="/pdf/cv_2024_eng.pdf" aria-label="Resume">Download Resume
+                        <a href="/pdf/cv_2024_eng.pdf" aria-label="Resume">{t('download')}
                         </a>
                     </Button>
                 </div>

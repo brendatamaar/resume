@@ -1,0 +1,41 @@
+{
+    "AppLayout": {
+        "home": "Home",
+        "logout": "Logout",
+        "profile": "Profile"
+    },
+    "Header": {
+        "download": "Download Resume"
+    },
+    "HomePage": {
+        "about": "About",
+        "workExperience": "Work Experience",
+        "education": "Education",
+        "keySkills": "Key Skills",
+        "featuredProjects": "Featured Projects",
+        "featuredMoreProjects": "See more projects",
+        "contacts": "Contacts",
+        "contactsMessage": "If you need expertise in developing software, designing products, solving problems or building teams, or just to grab some coffee and have a good talk, please reach out via:",
+        "contactsConnect": "Let's connect"
+    },
+    "LocaleSwitcher": {
+        "id": "Indonesia",
+        "en": "English",
+        "label": "Language",
+        "placeholder": "Select Language"
+    },
+    "LoginPage": {
+        "credentials": "Credentials: jane@doe.com / next-intl",
+        "description": "Please enter your details.",
+        "email": "Email",
+        "invalidCredentials": "Please check your credentials.",
+        "invalidEmail": "Please enter a valid email address.",
+        "invalidPassword": "Please enter a password.",
+        "login": "Sign in",
+        "password": "Password",
+        "title": "Welcome back"
+    },
+    "ProfilePage": {
+        "title": "Profile"
+    }
+}

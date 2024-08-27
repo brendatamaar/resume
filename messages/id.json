@@ -1,0 +1,41 @@
+{
+    "AppLayout": {
+        "home": "Start",
+        "logout": "Abmelden",
+        "profile": "Profil"
+    },
+    "Header": {
+        "download": "Unduh Resume"
+    },
+    "HomePage": {
+        "about": "Tentang",
+        "workExperience": "Pengalaman Kerja",
+        "education": "Pendidikan",
+        "keySkills": "Kemampuan",
+        "featuredProjects": "Project",
+        "featuredMoreProjects": "Lihat lainnya",
+        "contacts": "Kontak",
+        "contactsMessage": "Jika Anda memerlukan keahlian dalam pengembangan perangkat lunak, merancang produk atau memecahkan masalah, silakan hubungi saya melalui:",
+        "contactsConnect": "Hubungi Saya"
+    },
+    "LocaleSwitcher": {
+        "id": "Indonesia",
+        "en": "Inggris",
+        "label": "Sprache",
+        "placeholder": "Pilih Bahasa"
+    },
+    "LoginPage": {
+        "credentials": "Anmeldedaten: jane@doe.com / next-intl",
+        "description": "Bitte geben Sie Ihre Daten ein.",
+        "email": "Email",
+        "invalidCredentials": "Bitte überprüfen Sie Ihre Anmeldedaten.",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "invalidPassword": "Bitte geben Sie ein Passwort ein.",
+        "login": "Anmelden",
+        "password": "Passwort",
+        "title": "Willkommen zurück"
+    },
+    "ProfilePage": {
+        "title": "Profil"
+    }
+}
