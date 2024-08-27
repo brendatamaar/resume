@@ -8,7 +8,6 @@ export const NOW_DATA = {
     target: [
         "📜 Eager to learn about web architecture, system design, and product management.",
         "🗒️ Create review logs for books and movies, but too lazy and busy to do it.😹",
-        "🎯 Revisit Leetcode after several years of inactivity. Gonna strengthen DSA again after not practicing for a long time.",
         "📓 Write blogs just for fun."
     ],
     personal: [
