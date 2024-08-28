@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/section";
 import Menu from "@/components/Menu";
 import { PostCard } from "@/components/post-card";
 import Header from "@/components/Header";
-import Hero from '@/components/Hero';
 
 async function Home() {
     const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled })
@@ -14,7 +13,6 @@ async function Home() {
             <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
                 <Header />
 
-                <Hero />
                 <Section>
                     <h2 className="font-medium text-medium mb-8">Latest Posts</h2>
                     {blogPosts.map((blogPost) => {

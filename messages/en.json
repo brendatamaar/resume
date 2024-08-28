@@ -1,8 +1,10 @@
 {
-    "AppLayout": {
+    "Nav": {
         "home": "Home",
-        "logout": "Logout",
-        "profile": "Profile"
+        "now": "Now",
+        "project": "Project",
+        "blog": "Blog",
+        "toggleTheme": "Toggle theme"
     },
     "Header": {
         "download": "Download Resume"
@@ -19,23 +21,23 @@
         "contactsConnect": "Let's connect"
     },
     "LocaleSwitcher": {
-        "id": "Indonesia",
-        "en": "English",
+        "id": "ID",
+        "en": "EN",
         "label": "Language",
         "placeholder": "Select Language"
     },
-    "LoginPage": {
-        "credentials": "Credentials: jane@doe.com / next-intl",
-        "description": "Please enter your details.",
-        "email": "Email",
-        "invalidCredentials": "Please check your credentials.",
-        "invalidEmail": "Please enter a valid email address.",
-        "invalidPassword": "Please enter a password.",
-        "login": "Sign in",
-        "password": "Password",
-        "title": "Welcome back"
+    "Project": {
+        "projects": "List projects"
     },
     "ProfilePage": {
         "title": "Profile"
+    },
+    "CommandMenu": {
+        "press": "Press",
+        "open": "to open the command menu",
+        "type": "Type a command or search...",
+        "actions": "Actions",
+        "links": "Links",
+        "prints": "Print"
     }
 }

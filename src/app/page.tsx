@@ -5,9 +5,11 @@ import Menu from "@/components/Menu";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
+import { RESUME_DATA_ID } from "@/data/resume-data-id";
 import { ProjectCard } from "@/components/project-card";
 import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import { useTranslations } from 'next-intl';
+import { useLocale } from '@/components/LocaleProvider';
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -16,6 +18,8 @@ import Link from "next/link";
 
 export default function Page() {
   const t = useTranslations('HomePage');
+  const locale = useLocale();
+  const data = locale === 'en' ? RESUME_DATA : RESUME_DATA_ID;
 
   return (
     <motion.main
@@ -36,14 +40,14 @@ export default function Page() {
         <Section>
           <h2 className="font-medium text-medium mb-8">{t('about')}</h2>
           <p className="text-muted-foreground dark:text-font-dark-mode mb-6">
-            {RESUME_DATA.summary}
+            {data.summary}
           </p>
         </Section>
 
         <Section>
           <h2 className="font-medium text-medium mb-8">{t('workExperience')}</h2>
           <div className="flex flex-col gap-6">
-            {RESUME_DATA.work.map((work) => {
+            {data.work.map((work) => {
               return (
                 <div className="flex flex-col md:flex-row mb-6" key={work.company}>
                   <div className="mr-8 max-w-[120px] w-full text-muted-foreground dark:text-font-dark-mode">
@@ -67,7 +71,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="font-medium text-medium mb-8">{t('education')}</h2>
-          {RESUME_DATA.education.map((education) => {
+          {data.education.map((education) => {
             return (
               <div className="flex flex-col md:flex-row mb-6" key={education.school}>
                 <div className="mr-8 max-w-[120px] w-full text-muted-foreground dark:text-font-dark-mode">
@@ -91,7 +95,7 @@ export default function Page() {
         <Section>
           <h2 className="font-medium text-medium mb-8">{t('keySkills')}</h2>
           <div className="flex flex-wrap gap-1 mb-6">
-            {RESUME_DATA.skills.map((skill) => {
+            {data.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
@@ -100,7 +104,7 @@ export default function Page() {
         <Section>
           <h2 className="font-medium text-medium">{t('featuredProjects')}</h2>
           <div className="mb-6">
-            {RESUME_DATA.projects.map((project) => {
+            {data.projects.map((project) => {
               if (project.isFeatured) {
                 return (
                   <ProjectCard

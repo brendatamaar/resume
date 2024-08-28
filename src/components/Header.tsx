@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import LocaleSwitcher from '@/components/locale-switcher';
 import { useTheme } from "next-themes"
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
+import { useLocale } from '@/components/LocaleProvider';
 
 export default function Header() {
 
@@ -27,6 +29,9 @@ export default function Header() {
         }
     };
 
+    const t = useTranslations('Nav');
+    const locale = useLocale();
+
     return (
         <header className="relative z-50 leading-none font-medium tracking-[-0.41px] ">
             <div className="relative z-10">
@@ -34,38 +39,38 @@ export default function Header() {
 
                     <div className="flex justify-end">
                         <Link href="/" className="hover:underline">
-                            Home
+                            {t('home')}
                         </Link>
                     </div>
 
                     <div className="flex justify-end">
                         <Link href="/now" className="hover:underline">
-                            Now
+                            {t('now')}
                         </Link>
                     </div>
 
                     <div className="flex justify-end">
                         <Link href="/project" className="hover:underline">
-                            Project
+                            {t('project')}
                         </Link>
                     </div>
 
                     <div className="flex justify-end">
                         <Link href="/blog" className="hover:underline">
-                            Blog
+                            {t('blog')}
                         </Link>
-                    </div>
-
-                    <div className="flex justify-start">
-                        <LocaleSwitcher />
                     </div>
 
                     <div className="flex justify-end">
                         <Button variant="outline" size="icon" onClick={toggleTheme}>
                             <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                             <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                            <span className="sr-only">Toggle theme</span>
+                            <span className="sr-only">{t('toggleTheme')}</span>
                         </Button>
+                    </div>
+
+                    <div className="flex justify-end">
+                        <LocaleSwitcher />
                     </div>
 
                 </nav>

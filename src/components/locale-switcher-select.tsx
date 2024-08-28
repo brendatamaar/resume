@@ -38,7 +38,7 @@ export default function LocaleSwitcherSelect({
             <Select defaultValue={defaultValue} onValueChange={onChange}>
                 <SelectTrigger
                     aria-label={label}
-                    className="w-[180px]"
+                    className="w-[100px]"
                 >
                     <SelectValue placeholder={placeholder} />
                 </SelectTrigger>

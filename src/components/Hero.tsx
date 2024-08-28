@@ -1,45 +1,49 @@
 
 import { RESUME_DATA } from "@/data/resume-data";
+import { RESUME_DATA_ID } from "@/data/resume-data-id";
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useTranslations } from 'next-intl';
+import { useLocale } from '@/components/LocaleProvider';
 import Link from "next/link";
 
 export default function Hero() {
     const t = useTranslations('Header');
-
+    const locale = useLocale();
+    const data = locale === 'en' ? RESUME_DATA : RESUME_DATA_ID;
+    
     return (
         <div className="block md:flex print:flex items-center justify-between">
             <div className="flex-1 space-y-8">
-                <h1 className="text-medium font-medium -mb-4">{RESUME_DATA.name}</h1>
+                <h1 className="text-medium font-medium -mb-4">{data.name}</h1>
                 <p className="text-medium text-muted-foreground dark:text-font-dark-mode max-w-md">
-                    {RESUME_DATA.about}
+                    {data.about}
                 </p>
                 <p className="max-w-md items-center">
                     <Link
                         className="inline-flex gap-x-1.5 font-light text-muted-foreground dark:text-font-dark-mode align-baseline leading-none hover:underline"
-                        href={RESUME_DATA.locationLink}
+                        href={data.locationLink}
                         aria-label="Location"
                         target="_blank"
                     >
                         <GlobeIcon className="size-4" />
-                        {RESUME_DATA.location}
+                        {data.location}
                     </Link>
                 </p>
                 <div className="flex gap-x-1 pt-1 print:hidden">
-                    {RESUME_DATA.contact.email ? (
+                    {data.contact.email ? (
                         <Button
                             variant="outline"
                             size="sm"
                             asChild
                         >
-                            <Link href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Email">
+                            <Link href={`mailto:${data.contact.email}`} aria-label="Email">
                                 <MailIcon className="size-4" />
                             </Link>
                         </Button>
                     ) : null}
-                    {RESUME_DATA.contact.social.map((social) => (
+                    {data.contact.social.map((social) => (
                         <Button
                             key={social.name}
                             variant="outline"
@@ -58,22 +62,22 @@ export default function Hero() {
                     </Button>
                 </div>
                 <div className="hidden flex-col gap-x-1 print:flex">
-                    {RESUME_DATA.contact.email ? (
-                        <Link href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Print_email">
-                            <span className="underline">{RESUME_DATA.contact.email}</span>
+                    {data.contact.email ? (
+                        <Link href={`mailto:${data.contact.email}`} aria-label="Print_email">
+                            <span className="underline">{data.contact.email}</span>
                         </Link>
                     ) : null}
-                    {RESUME_DATA.contact.tel ? (
-                        <Link href={`tel:${RESUME_DATA.contact.tel}`} aria-label="Print_telp">
-                            <span className="underline">{RESUME_DATA.contact.tel}</span>
+                    {data.contact.tel ? (
+                        <Link href={`tel:${data.contact.tel}`} aria-label="Print_telp">
+                            <span className="underline">{data.contact.tel}</span>
                         </Link>
                     ) : null}
                 </div>
             </div>
 
             <Avatar className="size-28 mx-auto max-sm:w-1/2 max-sm:h-1/2 max-sm:mt-6">
-                <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} rel="dns-prefetch" />
-                <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+                <AvatarImage alt={data.name} src={data.avatarUrl} rel="dns-prefetch" />
+                <AvatarFallback>{data.initials}</AvatarFallback>
             </Avatar>
         </div>
     );

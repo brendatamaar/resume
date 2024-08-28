@@ -8,7 +8,6 @@ import { Locale, defaultLocale } from '@/config';
 const COOKIE_NAME = 'NEXT_LOCALE';
 
 export async function getUserLocale() {
-    console.log(cookies().get(COOKIE_NAME)?.value)
     return cookies().get(COOKIE_NAME)?.value || defaultLocale;
 }
 
