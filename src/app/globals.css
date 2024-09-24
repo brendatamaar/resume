@@ -81,7 +81,7 @@
 
 /* View Transition Styles */
 ::view-transition-group(root) {
-  animation-timing-function: var(--expo-in);
+  animation-timing-function: ease;
 }
 
 ::view-transition-new(root) {
