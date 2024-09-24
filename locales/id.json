@@ -14,10 +14,10 @@
         "workExperience": "Pengalaman Kerja",
         "education": "Pendidikan",
         "keySkills": "Kemampuan",
-        "featuredProjects": "Project",
+        "featuredProjects": "Proyek",
         "featuredMoreProjects": "Lihat lainnya",
         "contacts": "Kontak",
-        "contactsMessage": "Jika Anda memerlukan keahlian dalam pengembangan perangkat lunak, merancang produk atau memecahkan masalah, silakan hubungi saya melalui:",
+        "contactsMessage": "Jika Anda memerlukan keahlian dalam pengembangan aplikasi, merancang produk atau memecahkan masalah, silakan hubungi saya melalui:",
         "contactsConnect": "Hubungi Saya"
     },
     "LocaleSwitcher": {

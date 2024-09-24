@@ -25,7 +25,6 @@ export default function Header() {
     const t = useTranslations('Nav');
     const menuItems = [
         { key: 'home', href: '/' },
-        { key: 'now', href: '/now' },
         { key: 'project', href: '/project' },
         { key: 'blog', href: '/blog' }
     ];
