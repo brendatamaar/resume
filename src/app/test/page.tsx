@@ -65,7 +65,16 @@ function Project({ src }: ProjectProps) {
   );
 }
 
-function Home() {
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(date);
+}
+
+function Test() {
   const data = RESUME_DATA;
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -151,13 +160,6 @@ function Home() {
               return (
                 <div className="flex w-full flex-col" key={work.company}>
                   <div className="flex flex-row items-center gap-x-1">
-                    {work.badges && (
-                      <img
-                        src={work.badges}
-                        className="size-5"
-                        alt={`${work.company} badge`}
-                      />
-                    )}
                     <h3>{work.company}</h3>
                     <p className="mt-1 opacity-50">
                       {work.start} - {work.end}
@@ -252,4 +254,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Test;

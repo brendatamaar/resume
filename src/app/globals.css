@@ -75,6 +75,19 @@
   }
 }
 
+.text-content {
+    opacity: .9;
+    letter-spacing: -.00563rem;
+    font-weight: 420;
+    line-height: 1.5rem;
+}
+
+p {
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
 .print-force-new-page {
   page-break-before: always;
 }

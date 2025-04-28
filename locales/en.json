@@ -17,8 +17,9 @@
         "featuredProjects": "Featured Projects",
         "featuredMoreProjects": "See more projects",
         "contacts": "Contacts",
-        "contactsMessage": "If you need expertise in developing software, designing products, solving problems or building teams, or just to grab some coffee and have a good talk, please reach out via:",
-        "contactsConnect": "Let's connect"
+        "contactsMessage": "If you need helps in developing software, designing products, or solving problems, or just to grab some coffee and have a good talk, please reach out via:",
+        "contactsConnect": "Let's connect",
+        "download": "Download Resume"
     },
     "LocaleSwitcher": {
         "id": "ID",

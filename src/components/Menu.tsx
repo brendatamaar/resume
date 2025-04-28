@@ -1,6 +1,6 @@
 
 import { RESUME_DATA } from "@/data/resume-data";
-import { CommandMenu } from "@/components/command-menu";
+import { CommandMenu } from "@/components/utils/command-menu";
 
 export default function Menu() {
 

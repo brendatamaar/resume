@@ -1,36 +1,36 @@
-import { draftMode } from 'next/headers'
-import { fetchBlogPosts } from '../../contentful/blogPosts'
+import { draftMode } from "next/headers";
+import { fetchBlogPosts } from "../../contentful/blogPosts";
 import { Section } from "@/components/ui/section";
 import Menu from "@/components/Menu";
-import { PostCard } from "@/components/post-card";
+import { PostCard } from "@/components/utils/post-card";
 import Header from "@/components/Header";
 
 async function Home() {
-    const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled })
+  const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled });
 
-    return (
-        <main className="container relative mx-auto scroll-my-12 overflow-auto p-6 print:p-12 md:px-16 md:py-10">
-            <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
-                <Header />
+  return (
+    <main className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+      <section className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-14">
+        <Header />
 
-                <Section>
-                    <h2 className="font-medium text-medium mb-8">Latest Posts</h2>
-                    {blogPosts.map((blogPost) => {
-                        return (
-                            <PostCard
-                                key={blogPost.slug}
-                                title={blogPost.title}
-                                link={`blog/${blogPost.slug}`}
-                                date={blogPost.date}
-                            />
-                        );
-                    })}
-                </Section>
-            </section>
+        <Section>
+          <h2 className="text-medium mb-8 font-medium">Latest Posts</h2>
+          {blogPosts.map((blogPost) => {
+            return (
+              <PostCard
+                key={blogPost.slug}
+                title={blogPost.title}
+                link={`blog/${blogPost.slug}`}
+                date={blogPost.date}
+              />
+            );
+          })}
+        </Section>
+      </section>
 
-            <Menu />
-        </main>
-    )
+      <Menu />
+    </main>
+  );
 }
 
-export default Home
+export default Home;
