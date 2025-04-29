@@ -40,7 +40,7 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "PLN Icon Plus",
+      company: "Icon Plus",
       link: "https://plniconplus.co.id/",
       badges: "/images/iconpln.png",
       title: "Web Software Developer",
@@ -48,7 +48,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Now",
       description:
-        "Working on several web products by delivering new major features based on user feedback.",
+        "Working on several web products by delivering new major features.",
     },
     {
       company: "Cipta Kreasi",
@@ -59,7 +59,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Designed and developed SEO-optimized and search engine friendly landing pages.",
+        "Designed and developed SEO-optimized landing pages.",
     },
     {
       company: "Tebuireng Telecom",
