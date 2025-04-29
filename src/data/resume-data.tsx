@@ -6,6 +6,7 @@ export const RESUME_DATA = {
   location: "Jakarta, Indonesia (GMT +07)",
   locationLink: "https://www.google.com/maps/place/Jakarta",
   currentJob: "Web Software Developer",
+  description: "I am a web software developer specializing in designing and building applications with a focus on simplicity and usability.",
   about:
     "Specializing in designing and building web applications with focus on simplicity and usability.🖖",
   summary:

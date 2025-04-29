@@ -18,6 +18,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - ${RESUME_DATA.currentJob}`,
+  description: `${RESUME_DATA.description}`,
 };
 
 export default async function RootLayout({
